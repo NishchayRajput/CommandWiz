@@ -16,3 +16,15 @@
     background-color: grey;
     color: black;
 }
+
+h1 {
+    font-size: 50px;
+    color: black;
+    text-align: center;
+}
+
+h2 {
+    font-size: 25px;
+    color: grey;
+    text-align: center;
+}
