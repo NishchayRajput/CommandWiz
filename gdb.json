@@ -1,0 +1,80 @@
+{
+	"commands" : [
+		    {
+			"tag": "break [location]",
+			"message": "Set a breakpoint at the specified location (function, line, or address)"
+		    },
+		    {
+			"tag": "run [args]",
+			"message": "Start the program with optional arguments for debugging"
+		    },
+		    {
+			"tag": "continue",
+			"message": "Resume execution after stopping at a breakpoint"
+		    },
+		    {
+			"tag": "next",
+			"message": "Execute the next line of source code (skip function calls)"
+		    },
+		    {
+			"tag": "step",
+			"message": "Execute the next line of source code (enter function calls)"
+		    },
+		    {
+			"tag": "list [location]",
+			"message": "Display the source code around the specified location"
+		    },
+		    {
+			"tag": "info breakpoints",
+			"message": "Show information about set breakpoints"
+		    },
+		    {
+			"tag": "delete [breakpoint number]",
+			"message": "Remove the specified breakpoint or clear all breakpoints"
+		    },
+		    {
+			"tag": "backtrace",
+			"message": "Print a stack trace of function calls"
+		    },
+		    {
+			"tag": "print [expression]",
+			"message": "Evaluate and display the value of an expression"
+		    },
+		    {
+			"tag": "set [variable] [value]",
+			"message": "Change the value of a variable during debugging"
+		    },
+		    {
+			"tag": "info locals",
+			"message": "Display local variables in the current function"
+		    },
+		    {
+			"tag": "info threads",
+			"message": "List all threads in the debugged program"
+		    },
+		    {
+			"tag": "thread [thread number]",
+			"message": "Switch to the specified thread for debugging"
+		    },
+		    {
+			"tag": "break [function]",
+			"message": "Set a breakpoint at the start of the specified function"
+		    },
+		    {
+			"tag": "watch [expression]",
+			"message": "Set a watchpoint to break when an expression's value changes"
+		    },
+		    {
+			"tag": "info watchpoints",
+			"message": "List all active watchpoints"
+		    },
+		    {
+			"tag": "info sources",
+			"message": "List the directories where GDB looks for source files"
+		    },
+		    {
+			"tag": "info variables [scope]",
+			"message": "Display variables within a specified scope (local, global, etc.)"
+		    }
+	]
+}
