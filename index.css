@@ -17,6 +17,11 @@
     color: black;
 }
 
+.displayrow {
+    background-color: rgb(180, 180, 165);
+}
+
+
 h1 {
     font-size: 50px;
     color: black;
@@ -36,6 +41,7 @@ p {
     margin: 2vw;
     text-align: center;
 }
+
 .topnav {
     background-color: black;
     overflow: hidden;
@@ -55,22 +61,22 @@ p {
     color: black;
 }
 
-.column{
-	float: left;
-	width: 30%;
-	padding: 2vh;
-	padding-left: 2vw;
-	margin: 0.166vh;
-	border: 2px solid black;
+.column {
+    float: left;
+    width: 30%;
+    padding: 2vh;
+    padding-left: 2vw;
+    margin: 0.166vh;
+    border: 2px solid black;
 }
 
 .row::after {
-  content: "";
-  display: table;
-  clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
 
 @media screen and (max-width:99.5vw) {
-  .column {
-    width: 100%;
-  }
+    .column {
+        width: 100%;
+    }
