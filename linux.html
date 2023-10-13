@@ -10,87 +10,62 @@
     <title>Linux</title>
 </head>
 
-
 <body>
 
     <div class="accordion" id="accordionPanelsStayOpenExample">
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false"
-                    aria-controls="panelsStayOpen-collapseOne">
-                    <strong>man [command]</strong>
-                </button>
-            </h2>
-            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" style="">
-                <div class="accordion-body">
-                    Display the manual page for a specific command, providing detailed information about its usage and options.
-                </div>
-            </div>
-        </div>
-
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#panelsStayOpen-collapse2" aria-expanded="false"
-                    aria-controls="panelsStayOpen-collapse2">
-                    <strong>ls -l</strong>
-                </button>
-            </h2>
-            <div id="panelsStayOpen-collapse2" class="accordion-collapse collapse" style="">
-                <div class="accordion-body">
-                    List files and directories in long format, showing permissions, owner, group, size, and modification date.
-                </div>
-            </div>
-        </div>
-        
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#panelsStayOpen-collapse3" aria-expanded="false"
-                    aria-controls="panelsStayOpen-collapse3">
-                    <strong>head [file]</strong>
-                </button>
-            </h2>
-            <div id="panelsStayOpen-collapse3" class="accordion-collapse collapse" style="">
-                <div class="accordion-body">
-                    Display the first lines of a file.
-                </div>
-            </div>
-        </div>
-
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#panelsStayOpen-collapse4" aria-expanded="false"
-                    aria-controls="panelsStayOpen-collapse4">
-                    <strong>tail [file]</strong>
-                </button>
-            </h2>
-            <div id="panelsStayOpen-collapse4" class="accordion-collapse collapse" style="">
-                <div class="accordion-body">
-                    Display the last lines of a file.
-
-                </div>
-            </div>
-        </div>
-
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#panelsStayOpen-collapse5" aria-expanded="false"
-                    aria-controls="panelsStayOpen-collapse5">
-                    <strong>grep [pattern] [file]</strong>
-                </button>
-            </h2>
-            <div id="panelsStayOpen-collapse5" class="accordion-collapse collapse" style="">
-                <div class="accordion-body">
-                    Search for text patterns in files.
-
-                </div>
-            </div>
-        </div>
+        <!-- JavaScript will populate this section -->
     </div>
+
+    <script>
+        // Array of accordion item data
+        const accordionItems = [
+            {
+                command: "man [command]",
+                description: "Display the manual page for a specific command, providing detailed information about its usage and options."
+            },
+            {
+                command: "ls -l",
+                description: "List files and directories in long format, showing permissions, owner, group, size, and modification date."
+            },
+            {
+                command: "head [file]",
+                description: "Display the first lines of a file."
+            },
+            {
+                command: "tail [file]",
+                description: "Display the last lines of a file."
+            },
+            {
+                command: "grep [pattern] [file]",
+                description: "Search for text patterns in files."
+            }
+        ];
+
+        const accordionContainer = document.getElementById("accordionPanelsStayOpenExample");
+
+        // Generate accordion items dynamically
+        accordionItems.forEach((item, index) => {
+            const accordionItem = document.createElement("div");
+            accordionItem.className = "accordion-item";
+
+            accordionItem.innerHTML = `
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapse${index}" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapse${index}">
+                        <strong>${item.command}</strong>
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapse${index}" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        ${item.description}
+                    </div>
+                </div>
+            `;
+
+            accordionContainer.appendChild(accordionItem);
+        });
+    </script>
 
 </body>
 
