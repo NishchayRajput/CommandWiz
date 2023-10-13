@@ -1,0 +1,106 @@
+{
+	"commands" : [
+	
+	{	
+		"tag" : "git init",
+		"message" : "Initializes a new Git repository in the current directory"	
+	},
+
+	{
+		"tag" : "git clone [repository_url]",
+		"message" : "Creates a copy of a remote Git repository on your local machine"
+	},
+
+	{
+		"tag" : "git add [file(s)]",
+		"message" : "Stages changes for commit. You can use git add . to stage all changes."
+	},
+
+	{
+		"tag" : "git commit -m 'Your commit message'",
+		"message" : "Records staged changes into the Git history with a descriptive message."
+	},
+
+	{
+		"tag" : "git status",
+		"message" : "Shows the status of your working directory, including changes to be committed."
+		
+	},
+
+	{
+		"tag" : "git log",
+		"message" : "Displays a log of all commits, showing commit hashes, authors, dates, and commit messages."
+	},
+
+	{
+		"tag" : "git branch",
+		"message" : "Lists all local branches. The current branch is highlighted with an asterisk"
+	},
+
+	{
+		"tag" : "git checkout [branch_name or commit_hash]",
+		"message" : "Switches to a different branch or commit."
+	},
+
+	{
+		"tag" : "git pull",
+		"message" : "Fetches changes from a remote repository and merges them into the current branch."
+	},
+
+	{
+		"tag" : "git push",
+		"message" : "Pushes your local commits to a remote repository."
+	},
+	
+	{
+		"tag" : "git merge [branch_name]",
+		"message" : "Merges changes from one branch into the current branch."
+	},
+	
+	{
+		"tag" : "git rebase [branch_name]",
+		"message" : "Reapplies your changes on top of another branch, creating a linear history."
+	},
+	
+	{
+		"tag" : "git stash",
+		"message" : "Temporarily saves changes that are not ready to be committed."
+	},
+	
+	{
+		"tag" : "git reset [file(s)]",
+		"message" : "Unstages files or resets the current branch to a specific commit"
+	},
+	
+	{
+		"tag" : "git remote -v",
+		"message" : "Lists remote repositories linked to your local repository."
+	},
+	
+	{
+		"tag" : "git branch -d [branch_name]",
+		"message" : "Deletes a local branch."
+	},
+	
+	{
+		"tag" : "git config --global user.name 'Your Name'",
+		"message" : "Sets your Git username globally"
+	},
+	
+	{
+		"tag" : "git remote add [name] [url]",
+		"message" : "Adds a new remote repository."
+	},
+	
+	{
+		"tag" : "git cherry-pick [commit_hash]",
+		"message" : "Applies a specific commit to your current branch."
+	},
+	
+	{
+		"tag" : "git blame [file]",
+		"message" : "Shows who made each change to a file and when."
+	}
+	
+]
+}
