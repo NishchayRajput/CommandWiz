@@ -18,33 +18,16 @@
 
     <script>
         // Array of accordion item data
-        const accordionItems = [
-            {
-                command: "man [command]",
-                description: "Display the manual page for a specific command, providing detailed information about its usage and options."
-            },
-            {
-                command: "ls -l",
-                description: "List files and directories in long format, showing permissions, owner, group, size, and modification date."
-            },
-            {
-                command: "head [file]",
-                description: "Display the first lines of a file."
-            },
-            {
-                command: "tail [file]",
-                description: "Display the last lines of a file."
-            },
-            {
-                command: "grep [pattern] [file]",
-                description: "Search for text patterns in files."
-            }
-        ];
+        fetch('linux.json')
+        .then(response => response.json())
+        .then(data =>{
+            console.log(data.commands);
+        
 
         const accordionContainer = document.getElementById("accordionPanelsStayOpenExample");
 
         // Generate accordion items dynamically
-        accordionItems.forEach((item, index) => {
+        data.commands.forEach((item, index) => {
             const accordionItem = document.createElement("div");
             accordionItem.className = "accordion-item";
 
@@ -53,18 +36,19 @@
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#panelsStayOpen-collapse${index}" aria-expanded="false"
                         aria-controls="panelsStayOpen-collapse${index}">
-                        <strong>${item.command}</strong>
+                        <strong>${item.tag}</strong>
                     </button>
                 </h2>
                 <div id="panelsStayOpen-collapse${index}" class="accordion-collapse collapse">
                     <div class="accordion-body">
-                        ${item.description}
+                        ${item.message}
                     </div>
                 </div>
             `;
 
             accordionContainer.appendChild(accordionItem);
         });
+    })
     </script>
 
 </body>
